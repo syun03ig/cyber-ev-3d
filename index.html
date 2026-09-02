@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYBER-EV 2026 | Next-Gen Electric Vehicle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Three.js Library & OrbitControls -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
 
+  <!-- 3D Canvas -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- UI Overlay -->
+  <div class="ui-container">
+    <!-- Header -->
+    <header class="cyber-header">
+      <div class="logo">CYBER-EV <span class="badge">2026</span></div>
+      <div class="header-status">SYSTEM: ONLINE</div>
+    </header>
+
+    <!-- Main Title Area -->
+    <div class="hero-text">
+      <p class="sub-title">// NEXT-GEN EV CONCEPT</p>
+      <h1>MODEL-X CYBER</h1>
+      <p class="guide-text">◀ DRAG TO ROTATE 3D CAR ▶</p>
+    </div>
+
+    <!-- Color Selector HUD -->
+    <div class="color-hud">
+      <p class="hud-label">// BODY COLOR CUSTOMIZER</p>
+      <div class="color-options">
+        <button class="color-btn active" data-color="#111115" style="background-color: #111115;" title="Stealth Black"></button>
+        <button class="color-btn" data-color="#a0a5b5" style="background-color: #a0a5b5;" title="Cyber Silver"></button>
+        <button class="color-btn" data-color="#ff0044" style="background-color: #ff0044;" title="Neon Red"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

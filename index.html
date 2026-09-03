@@ -1,1 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYBER-EV 2026 | Next-Gen Electric Vehicle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Three.js Library & OrbitControls -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
 
+  <!-- Header / Navigation -->
+  <header class="cyber-header">
+    <div class="logo">CYBER-EV <span class="badge">2026</span></div>
+    <nav class="nav-links">
+      <a href="#home">HOME</a>
+      <a href="#models">MODELS</a>
+      <a href="#specs">SPECS</a>
+      <a href="#tech">AUTOPILOT</a>
+      <a href="#reserve">RESERVE</a>
+    </nav>
+    <div class="header-status">[ SYSTEM: ONLINE ]</div>
+  </header>
+
+  <!-- 1. HERO SECTION (見開き・宣伝エリア) -->
+  <section id="home" class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="sub-title">// NEXT-GEN ELECTRIC VEHICLE</p>
+      <h1>THE FUTURE OF MOBILITY</h1>
+      <p class="hero-desc">静寂を切り裂く、次世代のパフォーマンス。完全自動運転AIを搭載したフラッグシップEVコンセプト。</p>
+      <div class="hero-actions">
+        <a href="#models" class="btn btn-primary">EXPLORE MODELS</a>
+        <a href="#reserve" class="btn btn-outline">PRE-ORDER NOW</a>
+      </div>
+    </div>
+    
+    <!-- Hero Specs Bar -->
+    <div class="hero-specs-bar">
+      <div class="spec-item">
+        <span class="spec-num">1.9s</span>
+        <span class="spec-label">0-100 km/h</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-num">800km</span>
+        <span class="spec-label">EST. RANGE</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-num">LEVEL 5</span>
+        <span class="spec-label">AI AUTOPILOT</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. MODELS SECTION (車種選択・3D体験エリア) -->
+  <section id="models" class="section-container">
+    <div class="section-header">
+      <p class="section-sub">// LINEUP</p>
+      <h2>CHOOSE YOUR MODEL</h2>
+    </div>
+
+    <div class="model-grid">
+      <!-- Card 1 -->
+      <div class="model-card">
+        <div class="card-visual visual-gt">
+          <div class="car-badge">FLAGSHIP</div>
+        </div>
+        <div class="card-body">
+          <h3>MODEL-GT CYBER</h3>
+          <p class="card-desc">圧倒的な加速力と洗練されたエアロダイナミクスを誇るフラッグシップモデル。</p>
+          <div class="card-specs">
+            <span>0-100: 1.9s</span>
+            <span>Range: 800km</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-sm btn-outline open-3d-btn" data-model="MODEL-GT CYBER">DETAILS</button>
+            <button class="btn btn-sm btn-primary open-3d-btn" data-model="MODEL-GT CYBER">🧊 3D PREVIEW</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="model-card">
+        <div class="card-visual visual-cross">
+          <div class="car-badge">SUV / CROSS</div>
+        </div>
+        <div class="card-body">
+          <h3>MODEL-X CROSS</h3>
+          <p class="card-desc">全天候型4WDと大容量バッテリーを誇るラグジュアリークロスオーバー。</p>
+          <div class="card-specs">
+            <span>0-100: 2.8s</span>
+            <span>Range: 750km</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-sm btn-outline open-3d-btn" data-model="MODEL-X CROSS">DETAILS</button>
+            <button class="btn btn-sm btn-primary open-3d-btn" data-model="MODEL-X CROSS">🧊 3D PREVIEW</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="model-card">
+        <div class="card-visual visual-roadster">
+          <div class="car-badge">SUPERCAR</div>
+        </div>
+        <div class="card-body">
+          <h3>MODEL-R ROADSTER</h3>
+          <p class="card-desc">サーキットの領域へ。トリプルモーターを積んだ最高峰ハイパーカー。</p>
+          <div class="card-specs">
+            <span>0-100: 1.4s</span>
+            <span>Range: 650km</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-sm btn-outline open-3d-btn" data-model="MODEL-R ROADSTER">DETAILS</button>
+            <button class="btn btn-sm btn-primary open-3d-btn" data-model="MODEL-R ROADSTER">🧊 3D PREVIEW</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SPECS & TECH SECTION -->
+  <section id="specs" class="section-container bg-darker">
+    <div class="section-header">
+      <p class="section-sub">// PERFORMANCE</p>
+      <h2>ENGINEERED FOR EXCELLENCE</h2>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-box">
+        <h4>TRI-MOTOR DRIVE</h4>
+        <p>独立制御される3基の高性能モーターが、ミリ秒単位でトルクを最適化。どんな路面でも圧倒的なグリップ力を発揮します。</p>
+      </div>
+      <div class="tech-box">
+        <h4>SOLID-STATE BATTERY</h4>
+        <p>次世代全固体電池テクノロジーにより、わずか15分の超急速充電で500km以上の走行が可能です。</p>
+      </div>
+      <div class="tech-box" id="tech">
+        <h4>AUTOPILOT LEVEL 5</h4>
+        <p>360度カメラと3D LiDAR、ニューラルネットワークAIが周囲を常時センシング。完全自動運転を実現します。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. RESERVE SECTION -->
+  <section id="reserve" class="section-container">
+    <div class="section-header">
+      <p class="section-sub">// PRE-ORDER</p>
+      <h2>RESERVE YOUR CYBER-EV</h2>
+    </div>
+    <form class="cyber-form" onsubmit="event.preventDefault(); alert('予約リクエストを受け付けました。');">
+      <div class="form-group">
+        <label>SELECTED MODEL</label>
+        <select>
+          <option>MODEL-GT CYBER ($120,000~)</option>
+          <option>MODEL-X CROSS ($135,000~)</option>
+          <option>MODEL-R ROADSTER ($210,000~)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>FULL NAME</label>
+        <input type="text" placeholder="SHUN PORTFOLIO" required>
+      </div>
+      <div class="form-group">
+        <label>EMAIL ADDRESS</label>
+        <input type="email" placeholder="cyber@example.com" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">CONFIRM PRE-ORDER</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 CYBER-EV MOTORS. ALL RIGHTS RESERVED.</p>
+  </footer>
+
+  <!-- 🧊 3D PREVIEW MODAL (ボタンクリックで起動する3Dビューアー) -->
+  <div id="modal-3d" class="modal-overlay">
+    <div class="modal-content">
+      <button id="close-modal-btn" class="close-btn">&times; CLOSE</button>
+      
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h2 id="modal-model-title">MODEL-GT CYBER</h2>
+        <p class="guide-text">◀ DRAG TO ROTATE 3D CAR ▶</p>
+      </div>
+
+      <!-- 3D Canvas -->
+      <div class="canvas-wrapper">
+        <canvas id="webgl-canvas"></canvas>
+      </div>
+
+      <!-- Color Customizer HUD -->
+      <div class="color-hud">
+        <p class="hud-label">// BODY COLOR CUSTOMIZER</p>
+        <div class="color-options">
+          <button class="color-btn active" data-color="#111115" style="background-color: #111115;" title="Stealth Black"></button>
+          <button class="color-btn" data-color="#a0a5b5" style="background-color: #a0a5b5;" title="Cyber Silver"></button>
+          <button class="color-btn" data-color="#ff0044" style="background-color: #ff0044;" title="Neon Red"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
